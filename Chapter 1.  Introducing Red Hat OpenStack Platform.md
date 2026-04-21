@@ -4,6 +4,7 @@ Cloud Personas aresynthesized profiles of users, buyers or professionals who int
 They help orgs streamline workflows to different user groups instead of focusing on individual employees
 
 Openstack Personas focuses on the roles (this stuff actually seems very wierdly complex, will come back to this later)
+Edit: What I wrote below is literally what Openstack Personas are lmao.
 
 ## Personas
 | Name and Role | Description | Good Day | Bad Day |
@@ -14,7 +15,5 @@ Openstack Personas focuses on the roles (this stuff actually seems very wierdly 
 | **Carlos**<br>Cloud Ops | I make sure the cloud is up and running and, if it breaks, try to get things running again ASAP. | No new tickets from clients | Complexity and lack of skilled IT personnel |
 | **Arnie**<br>Infra Architect | I am responsible for the strategy and roadmap for my company's cloud. | Identify reasons to compel the management to adopt openstack for production environment | Frequent instabilities and non-deterministic errors |
 
-
 *Ref for above table: https://www.youtube.com/watch?v=2yDjvSebJHg*
-
 
