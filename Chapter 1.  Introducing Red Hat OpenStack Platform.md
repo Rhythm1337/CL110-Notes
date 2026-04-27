@@ -17,3 +17,58 @@ Edit: What I wrote below is literally what Openstack Personas are lmao.
 
 *Ref for above table: https://www.youtube.com/watch?v=2yDjvSebJHg*
 
+## Describing the OpenStackClient
+
+You generally have a file like this, that you can use to log in OpenStack
+
+```
+[stack@homelab ~]$ cat user-rhythm
+export OS_USERNAME=rhythm
+export OS_PASSWORD=redhat
+export OS_PROJECT_NAME=homelab
+export OS_PROJECT_DOMAIN_NAME=Default
+export OS_USER_DOMAIN_NAME=Default
+export OS_IDENTITY_API_VERSION=3
+export OS_AUTH_URL=http://172.25.250.50:5000/v3
+```
+
+OpenStack uses these env variables to work in CLI, to make them work. Run this
+
+```
+[stack@homelab ~]$ source user-rhythm
+```
+
+You can now start running commands, for exampe
+
+```
+openstack server list -c Name -c Status
++-----------------+--------+
+| Name            | Status |
++-----------------+--------+
+| home-server2    | ACTIVE |
++-----------------+--------+
+```
+
+*Note "-c" is used when you want to print out specific columns of the table displayed*
+
+OpenStack supports json and yaml as well, which can be used by adding "-f json" or "-f yaml"
+
+```
+[stack@homelab ~]$ openstack network list -f json
+[
+  {
+    "ID": "3f7a92c1-5b6e-4d8f-a2b3-91c7e5f4a102",
+    "Name": "alpha-net-xt9",
+    "Subnets": [
+      "a8d4c2e9-113b-4f6a-9c77-5e2d1b8f0c3a"
+    ]
+  },
+  {
+    "ID": "b6e1d3f4-9a27-41c8-b5e2-7d9f3a6c8e51",
+    "Name": "core-provider-zone7",
+    "Subnets": [
+      "d2f9a7b1-6c4e-48e3-8f12-3a9b5c7d0e6f"
+    ]
+  }
+]
+```
